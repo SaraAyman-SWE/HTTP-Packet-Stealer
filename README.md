@@ -28,18 +28,28 @@ ________________
 Parsing the packets requires that you read the header sections in the relevant IP and TCP RFCs. Be informed that both headers are of variable length and make sure you understand how this happens in order to parse the packets correctly. We're using IPv4 only.
 Notes
    * IHL in IP header and Data Offset in TCP header fields need special care.
+
    * Please don't parse all the packet fields; they're not needed. Only those in the skeleton are needed.
+
    * Building code based on simple test cases isn't correct. Build code based on knowledge from the RFCs instead.
+
    * This project requires a fair amount of knowledge with bitwise operators, slicing and binary. Kindly check the resources section.
+
    
 # Checklist
 
 > Your code can parse a byte literal containing an IP 
+
 > Your code has sockets set up and can capture TCP packets ONLY 
+
 > Your code extracts the IHL field correctly from the IP header 
+
 > Your code extracts source and destination IPs from the IP header and extracts the payload 
+
 > Your code extracts TCP source and destination ports 
+
 > Your code extracts TCP data offset 
+
 > Your code extracts TCP payload and prints it 
 
 The parse_application_layer_packet will always return the parsed packet and never None
